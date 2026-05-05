@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 import { useState, useEffect, useRef } from "react";
 
 const SERVICES = [
@@ -412,7 +414,7 @@ export default function App() {
 
       {/* HEADER */}
       <header className={scrolled ? "scrolled" : ""}>
-        <a className="logo" onClick={() => scrollTo("Início")}>
+        <a href="#" className="logo" onClick={() => scrollTo("Início")}>
           <span className="logo-top">Studio</span>
           <span className="logo-main">Vanessa Meire</span>
           <span className="logo-sub">Beleza & Estética</span>
@@ -420,7 +422,7 @@ export default function App() {
 
         <nav className="desktop">
           {NAV_LINKS.map((l) => (
-            <a key={l} className={activeSection === l ? "active" : ""} onClick={() => scrollTo(l)}>{l}</a>
+            <a href="#" key={l} className={activeSection === l ? "active" : ""} onClick={() => scrollTo(l)}>{l}</a>
           ))}
           <a className="cta-btn" href="https://wa.me/5543991274703" target="_blank" rel="noreferrer">Agendar</a>
         </nav>
@@ -433,7 +435,7 @@ export default function App() {
       {/* MOBILE MENU */}
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         {NAV_LINKS.map((l) => (
-          <a key={l} onClick={() => scrollTo(l)}>{l}</a>
+          <button key={l} onClick={() => scrollTo(l)}>{l}</button>
         ))}
         <a className="cta-btn" href="https://wa.me/5543991274703" target="_blank" rel="noreferrer">Agendar Agora</a>
       </div>
@@ -634,7 +636,7 @@ export default function App() {
           <span className="logo-sub">Beleza & Estética</span>
         </div>
         <div className="footer-links">
-          {NAV_LINKS.map((l) => <a key={l} onClick={() => scrollTo(l)}>{l}</a>)}
+          {NAV_LINKS.map((l) => <button key={l} onClick={() => scrollTo(l)}>{l}</button>)}
         </div>
         <div className="footer-social">
           <a className="social-btn" href="https://www.instagram.com/studio_vanessa_meire" target="_blank" rel="noreferrer">
