@@ -16,7 +16,7 @@ export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("Início");
   const [activeCategory, setActiveCategory] = useState(0);
-  const [visible, setVisible] = useState({});
+  const [visible, setVisible] = useState({}); 
   const observerRef = useRef(null);
  
   const [form, setForm] = useState({ nome: "", whatsapp: "", servico: "", mensagem: "" });
