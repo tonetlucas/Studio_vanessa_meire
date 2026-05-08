@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
  
 const SERVICES = [
-  { category: "Cabelos", items: ["Corte Feminino",, "Escova", "Progressiva", "Hidratação", "Coloração", "Mechas & Luzes", "Cauterização"] },
+  { category: "Cabelos", items: ["Corte Feminino", "Escova", "Progressiva", "Hidratação", "Coloração", "Mechas & Luzes", "Cauterização"] },
   { category: "Unhas", items: ["Manicure", "Pedicure", "Gel", "Fibra de Vidro", "Alongamento", "Nail Art"] },
   { category: "Estética", items: ["Limpeza de Pele", "Design de Sobrancelha", "Micropigmentação", "Depilação"] },
   { category: "Especiais", items: ["Dia da Noiva", "Dia da Debutante", "Penteados", "Maquiagem"] },
@@ -17,7 +17,6 @@ export default function App() {
   const [activeSection, setActiveSection] = useState("Início");
   const [activeCategory, setActiveCategory] = useState(0);
   const [visible, setVisible] = useState({});
-  const sectionsRef = useRef({});
   const observerRef = useRef(null);
  
   const [form, setForm] = useState({ nome: "", whatsapp: "", servico: "", mensagem: "" });
